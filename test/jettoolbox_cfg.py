@@ -15,7 +15,7 @@ process.MessageLogger.suppressWarning = cms.untracked.vstring('ecalLaserCorrFilt
 process.options = cms.untracked.PSet( wantSummary = cms.untracked.bool(True) )
 process.options.allowUnscheduled = cms.untracked.bool(True)
 
-from JetToolbox.jetToolbox_cff import *
+from cmsjet.JetToolbox.jetToolbox_cff import *
 jetToolbox( process, 'ak8', 'ak8JetSubs', 'out', addSubjets= True ) #, addGroomers = False )
 jetToolbox( process, 'ca8', 'ca8JetSubs', 'out', addSubjets=True, addNsub=True, addPruning=True, nfilt=5 , zCut=0.2, addTrimming=True, addCMSTopTagger=True, addHEPTopTagger=True, addMassDrop=True )
 jetToolbox( process, 'ca15', 'ca15JetSubs', 'out' )
@@ -31,6 +31,6 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(100) )
 #process.source.fileNames = filesRelValProdTTbarAODSIM
 
 process.source = cms.Source("PoolSource",
-		fileNames = cms.untracked.vstring('/store/relval/CMSSW_7_2_2_patch1/RelValTTbar_13/MINIAODSIM/PU50ns_MCRUN2_72_V0-v1/00000/0683685E-8D73-E411-9A7A-0025905A60D0.root')
+		fileNames = cms.untracked.vstring('/store/mc/Spring14miniaod/QCD_Pt-300to470_Tune4C_13TeV_pythia8/MINIAODSIM/141029_PU40bx50_castor_PLS170_V6AN2-v1/00000/1A3D915A-CA7F-E411-AFE2-0025905A48D0.root')
 		)
 
