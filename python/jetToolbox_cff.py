@@ -18,7 +18,7 @@ from RecoJets.JetProducers.SubJetParameters_cfi import SubJetParameters
 from CommonTools.ParticleFlow.pfNoPileUpJME_cff  import *
 
 
-def jetToolbox( proc, jetType, jetSequence, outputFile, minPt=100., 
+def jetToolbox( proc, jetType, jetSequence, outputFile, minPt=10., 
 		addPruning=False, zCut=0.1, rCut=0.5, addPrunedSubjets=False,
 		addTrimming=False, rFiltTrim=0.2, ptFrac=0.03,
 		addFiltering=False, rfilt=0.3, nfilt=3,
