@@ -16,7 +16,7 @@ process.options = cms.untracked.PSet( wantSummary = cms.untracked.bool(True) )
 process.options.allowUnscheduled = cms.untracked.bool(True)
 
 from JMEAnalysis.JetToolbox.jetToolbox_cff import *
-jetToolbox( process, 'ak4', 'ak4JetSubs', 'out', addNsub=True, addPruning=True, nfilt=5 , zCut=0.2 ,addTrimming=True)
+jetToolbox( process, 'ak4', 'ak4JetSubs', 'out', minPt=10., addNsub=True, addPruning=True, nfilt=5 , zCut=0.2 ,addTrimming=True, addFiltering=True)
 
 
 #process.out = cms.OutputModule("PoolOutputModule",
